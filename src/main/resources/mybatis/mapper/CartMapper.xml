@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 ，为了使用接口动态代理，这里必须是接口的全路径名 -->
+<mapper namespace="com.hz.demo.dao.CartMapper">
+    <select id="getGoodsById" resultType="com.hz.demo.model.GoodsInfo" parameterType="java.lang.String">
+        SELECT GOODS_ID1 AS goodsId,GOODS_NAME1 AS goodsName,GOODS_PRICE1 AS goodsPrice,
+                GOODS_IMG1 AS goodsImg,GOODS_DESC1 AS goodsDesc,GOODS_NUM1 AS goodsNum
+            FROM goods WHERE GOODS_ID1 = #{goodsId}
+
+    </select>
+
+</mapper>
